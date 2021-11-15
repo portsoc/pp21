@@ -59,11 +59,8 @@ There are two optional query parameters:
 
 For example `/img/240/180?square=60&text=Example` will serve
 a 240x180 image with 60x60 squares and the text "Example" in
-the centre, like this:
+the centre.
 
-![  for example:  ](
-  http://richboakes.myvm.port.ac.uk/img/240/180?square=60&text=Example
-)
 
 #### Limits
 
