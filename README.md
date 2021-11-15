@@ -26,7 +26,7 @@ API. We suggest using `express.static` to serve the
 pages.
 
 You can see it all working at
-[http://richboakes.myvm.port.ac.uk/](http://http://richboakes.myvm.port.ac.uk/)
+[http://richboakes.myvm.port.ac.uk/](http://richboakes.myvm.port.ac.uk/)
 
 __Note__ this site is behind the uni firewall, so you must be
 onsite, use the VPN, or the
