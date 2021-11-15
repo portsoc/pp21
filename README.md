@@ -1,4 +1,4 @@
-# WebScript Server Coursework
+# Placeport Challenge
 
 **Before** you start coding, read _all_ of this document.
 
@@ -11,8 +11,6 @@ You will be submitting a single file called `server.js` which
 you are going to write from scratch.  The only library you are
 permitted to use is _Express_, so we have included this as a
 dependency in `package.json` for your convenience.  
-
-**Before** you start coding, read _all_ of this document.
 
 We have (as usual) provided a suite of QUnit tests that help
 to specify the correct operation of your server.  Instructions
@@ -28,7 +26,7 @@ API. We suggest using `express.static` to serve the
 pages.
 
 You can see it all working at
-[placeport.boakes.org:8080](http://placeport.boakes.org:8080)
+[http://richboakes.myvm.port.ac.uk/](http://http://richboakes.myvm.port.ac.uk/)
 
 __Note__ this site is behind the uni firewall, so you must be
 onsite, use the VPN, or the
@@ -64,7 +62,7 @@ a 240x180 image with 60x60 squares and the text "Example" in
 the centre, like this:
 
 ![  for example:  ](
-  http://placeport.boakes.org:8080/img/240/180?square=60&text=Example
+  http://richboakes.myvm.port.ac.uk/img/240/180?square=60&text=Example
 )
 
 #### Limits
@@ -113,7 +111,7 @@ Your server should keep  statistics of successful image
 requests. The stats are showcased on a page called
 `/stats.html`, provided in the `public` folder. See them in
 action at
-[placeport.boakes.org:8080](http://placeport.boakes.org:8080/stats.html).
+[richboakes.myvm.port.ac.uk](http://richboakes.myvm.port.ac.uk/stats.html).
 
 The stats are returned under the following API routes:
 
