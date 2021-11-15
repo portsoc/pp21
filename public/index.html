@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+
+
+<title>PlacePort Image Server</title>
+
+
+<aside id=adjuster>
+    <h2 id=opener>Click to edit this image.</h2>
+
+    <div id="panel"> <!-- hidden by default -->
+        <p class="url">
+            /img/
+            <span class=width><input type=number id="w" value=400 min=1 max=4000></span>
+            /
+            <span class=height><input type=number id="h" value=400 min=1 max=4000></span>
+            ?
+            <span class=squaresize>step = <input type=number id="b" value=40 min=1 max=1000></span>
+            &amp;
+            <span class=text>text = <input id="t" placeholder='...text'></span>
+
+            <img id="copy" src="i/clippy.svg" alt="Copy to clipboard">
+        </p>
+
+        <p id=feedback>Edit the header image.  It will update automatically.  Use the copy button to save the URL to the clipboard.</p>
+    </div>
+
+</aside>
+
+
+<header>
+
+    <!-- the image src is automatically replaced with a size that fits the window -->
+    <img src="/img/400/200"
+        id=masthead
+        alt="A dynamic generated placeholder image.">
+
+</header>
+
+<main>
+    <h1>PlacePort</h1>
+    <p>This is PlacePort.  Placeport will generate a 'placeholder' image upon request, given a width and a height.</p>
+
+    <p>The width and height are specified in the image path:</p>
+
+    <p class=path><code>/img/<span class=width>{width}</span>/<span class=height>{height}</span></code></p>
+    <p>For example, a 400x200 image would be specified as:</p>
+
+    <p class=path><code>/img/<span class=width>400</span>/<span class=height>200</span></code>
+    </p>
+    <img src="/img/400/200" alt="A placeholder image.">
+
+    <p>By default, the image has colour blocks that are 50x50 pixel squares. We can control how large the blocks are with the <code>size</code> parameter:</p>
+
+    <p class=path>
+        <code>/img/<span class=width>400</span>/<span class=height>200</span>?<span class=squaresize>square=20</span></code>
+    </p>
+
+    <img src="/img/400/200?square=20" alt="Placeholder with 20px colour squares.">
+
+    <p>The server has limits on dimensions and square size, for performance reasons. Request outside the allowed dimensions will fail; requests with square size under the minimum will use the minimum square size.</p>
+
+    <p>The centre of the image shows the image dimensions. This can be replaced with any text:</p>
+
+    <p class=path>
+        <code>/img/<span class=width>400</span>/<span class=height>200</span>?<span class=text>text=PlacePort</span></code>
+    </p>
+
+    <img src="/img/400/200?text=PlacePort" alt="A placeholder image with custom text.">
+
+    <p>More examples, combining custom text and square sizes:</p>
+
+    <p class="path">/img/<span class="width">240</span>/<span class="height">180</span>?<span class="squaresize">square=50</span>&<span class="text">text=Fifty</span></p>
+    <img src="/img/240/180?square=50&text=Fifty" alt="A placeholder image.">
+
+    <p class="path">/img/<span class="width">240</span>/<span class="height">180</span>?<span class="squaresize">square=20</span>&<span class="text">text=Twenty</span></p>
+    <img src="/img/240/180?square=20&text=Twenty" alt="A placeholder image.">
+
+    <p class="path">/img/<span class="width">240</span>/<span class="height">180</span>?<span class="squaresize">square=1</span>&<span class="text">text=One</span></p>
+    <img src="/img/240/180?square=1&text=One" alt="A placeholder image.">
+
+</main>
+
+
+<footer>
+    <img src="i/logo.svg" alt="University of Portsmouth">
+</footer>
+</html>

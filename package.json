@@ -1,0 +1,39 @@
+{
+  "name": "placeport",
+  "version": "1.0.0",
+  "description": "A placeholder image generator and server.",
+  "main": "svr.js",
+  "scripts": {
+    "test": "cross-env SINGLE=true qunit test.js",
+    "test-all": "qunit test.js",
+    "start": "nodemon server.js",
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "keywords": [
+    "placeholder",
+    "image",
+    "portsmouth",
+    "port.ac.uk",
+    "server",
+    "node",
+    "module"
+  ],
+  "author": "Rich Boakes <rjb@boakes.org>, Jacek Kopecky <jacek@jacek.cz>",
+  "contributors": [
+    "Matt Dennis <matthew.dennis@port.ac.uk>"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.8.0",
+    "express": "^4.16.4"
+  },
+  "resolutions": {
+    "ansi-regex": "5.0.1"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "node-fetch": "^2.3.0",
+    "nodemon": "^2.0.15",
+    "qunit": "2.8.x"
+  }
+}

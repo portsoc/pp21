@@ -1,0 +1,6 @@
+{
+  "name": "imager",
+  "version": "1.0.0",
+  "description": "creates placeholder images",
+  "main": "imager.js"
+}
